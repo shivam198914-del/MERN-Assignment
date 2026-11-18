@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MERN Stack Developer Internship Application Form built with semantic HTML5 inputs and validation.">
+    <meta name="author" content="Shivam Raj">
+    <title>Software Developer Internship Application - Assignment 02</title>
+</head>
+<body>
+
+    <header>
+        <h1>MERN Stack Developer Internship — Application Form</h1>
+        <p>Please fill out all required fields accurately to apply for the 2026 Summer Internship Cohort.</p>
+    </header>
+
+    <main>
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <!-- Fieldset 1: All 6 Text-Based Inputs -->
+            <fieldset>
+                <legend>1. Applicant Identity &amp; Contact Details</legend>
+
+                <p>
+                    <label for="full-name">Full Name (Required):</label><br>
+                    <input type="text" id="full-name" name="full_name" placeholder="Your Name" minlength="3" required>
+                </p>
+
+                <p>
+                    <label for="email-address">Email Address (Required):</label><br>
+                    <input type="email" id="email-address" name="email" placeholder="Your Email Address" required>
+                </p>
+
+                <p>
+                    <label for="portal-password">Create Applicant Portal Password (Min 8 characters):</label><br>
+                    <input type="password" id="portal-password" name="password" placeholder="At least 8 characters" minlength="8" required>
+                </p>
+
+                <p>
+                    <label for="phone-number">Phone Number (10-digit Indian mobile number):</label><br>
+                    <input type="tel" id="phone-number" name="phone" placeholder="XXXXXXXXXX" pattern="[0-9]{10}" title="Enter a valid 10-digit phone number" required>
+                </p>
+
+                <p>
+                    <label for="portfolio-url">GitHub or Portfolio URL:</label><br>
+                    <input type="url" id="portfolio-url" name="portfolio_url" placeholder="Enter URL" required>
+                </p>
+
+                <p>
+                    <label for="grad-year">Expected Graduation Year (2025 – 2032):</label><br>
+                    <input type="number" id="grad-year" name="grad_year" placeholder="2030" min="2025" max="2032" required>
+                </p>
+            </fieldset>
+
+        </form>
+    </main>
+
+</body>
+</html>
