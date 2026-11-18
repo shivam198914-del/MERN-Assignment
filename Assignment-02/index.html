@@ -23,12 +23,12 @@
 
                 <p>
                     <label for="full-name">Full Name (Required):</label><br>
-                    <input type="text" id="full-name" name="full_name" placeholder="Your Name" minlength="3" required>
+                    <input type="text" id="full-name" name="full_name" placeholder="e.g., Shivam Raj" minlength="3" required>
                 </p>
 
                 <p>
                     <label for="email-address">Email Address (Required):</label><br>
-                    <input type="email" id="email-address" name="email" placeholder="Your Email Address" required>
+                    <input type="email" id="email-address" name="email" placeholder="e.g., shivam198914@gmail.com" required>
                 </p>
 
                 <p>
@@ -38,17 +38,106 @@
 
                 <p>
                     <label for="phone-number">Phone Number (10-digit Indian mobile number):</label><br>
-                    <input type="tel" id="phone-number" name="phone" placeholder="XXXXXXXXXX" pattern="[0-9]{10}" title="Enter a valid 10-digit phone number" required>
+                    <input type="tel" id="phone-number" name="phone" placeholder="e.g., 9876543210" pattern="[0-9]{10}" title="Enter a valid 10-digit phone number" required>
                 </p>
 
                 <p>
                     <label for="portfolio-url">GitHub or Portfolio URL:</label><br>
-                    <input type="url" id="portfolio-url" name="portfolio_url" placeholder="Enter URL" required>
+                    <input type="url" id="portfolio-url" name="portfolio_url" placeholder="https://github.com/shivam198914-del" required>
                 </p>
 
                 <p>
                     <label for="grad-year">Expected Graduation Year (2025 – 2032):</label><br>
                     <input type="number" id="grad-year" name="grad_year" placeholder="2030" min="2025" max="2032" required>
+                </p>
+            </fieldset>
+
+            <!-- Fieldset 2: Choice Inputs (radio, checkbox, select, datalist) -->
+            <fieldset>
+                <legend>2. Role Preferences &amp; Technical Skills</legend>
+
+                <p>Preferred Work Mode (Radio):</p>
+                <p>
+                    <input type="radio" id="mode-remote" name="work_mode" value="remote" required>
+                    <label for="mode-remote">Remote</label><br>
+
+                    <input type="radio" id="mode-hybrid" name="work_mode" value="hybrid">
+                    <label for="mode-hybrid">Hybrid</label><br>
+
+                    <input type="radio" id="mode-onsite" name="work_mode" value="onsite">
+                    <label for="mode-onsite">On-Site</label>
+                </p>
+
+                <p>Technical Stack Proficiency (Checkbox):</p>
+                <p>
+                    <input type="checkbox" id="skill-html" name="skills" value="HTML5">
+                    <label for="skill-html">HTML5 &amp; Semantic Web</label><br>
+
+                    <input type="checkbox" id="skill-css" name="skills" value="CSS3">
+                    <label for="skill-css">CSS3 &amp; Responsive Design</label><br>
+
+                    <input type="checkbox" id="skill-js" name="skills" value="JavaScript">
+                    <label for="skill-js">JavaScript (ES6+)</label><br>
+
+                    <input type="checkbox" id="skill-mern" name="skills" value="MERN">
+                    <label for="skill-mern">MongoDB, Express, React, Node.js</label>
+                </p>
+
+                <p>
+                    <label for="primary-track">Primary Engineering Track (Select):</label><br>
+                    <select id="primary-track" name="engineering_track" required>
+                        <option value="">-- Choose a Track --</option>
+                        <option value="frontend">Frontend Web Development</option>
+                        <option value="backend">Backend &amp; API Engineering</option>
+                        <option value="fullstack">Full-Stack MERN Development</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="university-name">University / College Name (Datalist with autocomplete):</label><br>
+                    <input list="universities" id="university-name" name="university" placeholder="Start typing or choose..." required>
+                    <datalist id="universities">
+                        <option value="Invertis University, Bareilly">
+                        <option value="IIT Delhi">
+                        <option value="NIT Trichy">
+                        <option value="Delhi Technological University">
+                        <option value="VIT Vellore">
+                    </datalist>
+                </p>
+            </fieldset>
+
+            <!-- Fieldset 3: Date, Time, File, Range, Color, and Textarea -->
+            <fieldset>
+                <legend>3. Availability, Resume &amp; Additional Notes</legend>
+
+                <p>
+                    <label for="start-date">Earliest Available Start Date (Date):</label><br>
+                    <input type="date" id="start-date" name="start_date" min="2026-11-18" required>
+                </p>
+
+                <p>
+                    <label for="interview-time">Preferred Interview Slot Time (Time):</label><br>
+                    <input type="time" id="interview-time" name="interview_time" min="09:00" max="18:00" required>
+                </p>
+
+                <p>
+                    <label for="resume-upload">Upload Resume / CV (PDF only):</label><br>
+                    <input type="file" id="resume-upload" name="resume" accept=".pdf" required>
+                </p>
+
+                <p>
+                    <label for="coding-confidence">Self-Rated Problem Solving Level (1 to 10):</label><br>
+                    <input type="range" id="coding-confidence" name="confidence_level" min="1" max="10" value="7">
+                </p>
+
+                <p>
+                    <label for="badge-color">Preferred Intern ID Card Accent Color:</label><br>
+                    <input type="color" id="badge-color" name="badge_color" value="#1e40af">
+                </p>
+
+                <p>
+                    <label for="cover-note">Why do you want to join this internship? (Textarea):</label><br>
+                    <textarea id="cover-note" name="cover_note" rows="5" cols="50" minlength="20" placeholder="Briefly describe your projects, motivation, and what you hope to build..." required></textarea>
                 </p>
             </fieldset>
 
